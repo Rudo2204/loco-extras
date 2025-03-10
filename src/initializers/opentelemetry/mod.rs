@@ -1,8 +1,9 @@
-use axum::{async_trait, Router as AxumRouter};
+use async_trait::async_trait;
+use axum::Router as AxumRouter;
 use axum_tracing_opentelemetry::middleware::{OtelAxumLayer, OtelInResponseLayer};
 use loco_rs::{
-    app::{AppContext, Initializer},
     Error, Result,
+    app::{AppContext, Initializer},
 };
 
 pub struct OpenTelemetryInitializer;
